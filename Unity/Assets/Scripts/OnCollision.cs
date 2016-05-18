@@ -12,7 +12,8 @@ public class OnCollision : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(string.IsNullOrEmpty(requiredTag) || collision.gameObject.tag == requiredTag)
+            Debug.Log(collision.gameObject.name+"sdfsdfsdf");
+        if (string.IsNullOrEmpty(requiredTag) || collision.gameObject.tag == requiredTag)
         {
             onCollisionEnter.Invoke(collision);
         }
